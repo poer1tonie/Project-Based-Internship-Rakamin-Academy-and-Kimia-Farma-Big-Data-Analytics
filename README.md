@@ -102,7 +102,7 @@ This query provides the following insights:
 
 ## Dashboard
 Google Looker Dashboard Link: https://lookerstudio.google.com/reporting/22617c03-62d3-4d3b-87b4-e30c755a2515
-![dashboard](Dashboard.png)
+!Dashboard.png
 
 
 
