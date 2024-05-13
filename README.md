@@ -24,22 +24,22 @@ The provided dataset consists of the following tables: <br>
 ### Aggregate Table
 An aggregate table is a table created by gathering and calculating data from the base tables. This aggregate table contains more concise information and is used for analyzing data more quickly and efficiently. The results of this table will be used as a source for creating sales dashboard reports. The following are the mandatory columns in this table: <br>
 
-● transaction_id : kode id transaksi<br>
-● date : tanggal transaksi dilakukan<br>
-● branch_id : kode id cabang Kimia Farma<br>
-● branch_name : nama cabang Kimia Farma<br>
-● kota : kota cabang Kimia Farma<br>
-● provinsi : provinsi cabang Kimia Farma<br>
-● rating_cabang : penilaian konsumen terhadap cabang Kimia Farma <br>
-● customer_name : Nama customer yang melakukan transaksi<br>
-● product_id : kode product obat<br>
-● product_name : nama obat<br>
-● actual_price : harga obat<br>
-● discount_percentage : Persentase diskon yang diberikan pada obat<br>
-● persentase_gross_laba : Persentase laba yang seharusnya diterima dari obat <br>
-● nett_sales : harga setelah diskon<br>
-● nett_profit : keuntungan yang diperoleh Kimia Farma<br>
-● rating_transaksi : penilaian konsumen terhadap transaksi yang dilakukan<br>
+* transaction_id: Transaction ID
+* date: Date of transaction
+* branch_id: Kimia Farma branch ID
+* branch_name: Name of Kimia Farma branch
+* city: City of Kimia Farma branch
+* province: Province of Kimia Farma branch
+* rating_branch: Customer rating of the Kimia Farma branch
+* customer_name: Name of the customer conducting the transaction
+* product_id: Drug product code
+* product_name: Name of the drug
+* actual price: Drug price
+* discount_percentage: Percentage of discount given on the drug
+* gross_profit_percentage: Percentage of profit expected from the drug
+* nett_sales: Price after discount
+* nett_profit: Profit obtained by Kimia Farma
+* transaction_rating: Customer rating of the transaction conducted
 
 ## 📂 **SQL Syntax**
 Google BigQuery Link : https://console.cloud.google.com/bigquery?sq=784164172648:d66c1687344e4fc386f20e6a5f78b53f
