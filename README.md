@@ -1,4 +1,4 @@
-## 📂 **About The Program**
+## 📂 **About Project Based Internship Rakamin Academy x Kimia Farma**
 As a Big Data Analytics Intern at Kimia Farma, my tasks will encompass a series of challenges that require a deep understanding of data and analytical skills. One of my main projects is to evaluate Kimia Farma's business performance from 2020 to 2023. Through the narrative built from the analysis findings, I can highlight important insights into sales performance, including areas requiring further attention and potential growth opportunities. The prepared infographics and data visualizations provide clear and easily understandable understanding of the analysis findings, facilitating interpretation and decision-making.
 
 ## 📂 **About Kimia Farma**
