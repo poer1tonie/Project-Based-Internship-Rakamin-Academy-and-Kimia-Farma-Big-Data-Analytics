@@ -130,7 +130,20 @@ This query provides the following insights:
 * Total net sales and net profit.
 * Average transaction and branch ratings.
 
-## 📂 **Dashboard**
+## 📂 **Data Visualization**
+This dashboard you're creating is based on the analysis table you've previously built in BigQuery, so you need to connect that table to Google Looker Studio. You can design the dashboard according to your creativity, but it should include:
+
+* Dashboard Title
+* Dashboard Summary
+* Filter Control
+* Snapshot Data
+* Year-over-Year Revenue Comparison for Kimia Farma
+* Top 10 Total Transactions by Province Branch
+* Top 10 Nett Sales by Province Branch
+* Top 5 Branches with the Highest Ratings but Lowest Transaction Ratings
+* Indonesia's Geo Map for Total Profit by Province
+* And other analyses you can explore.
+
 Google Looker Dashboard Link: https://lookerstudio.google.com/reporting/22617c03-62d3-4d3b-87b4-e30c755a2515
 ![image](https://github.com/poer1tonie/Project-Based-Internship-Rakamin-Academy-dan-Kimia-Farma-Big-Data-Analytics/assets/165170405/daa54314-f868-4861-a502-c4dd1bf763fd)
 
