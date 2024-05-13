@@ -43,12 +43,12 @@ An aggregate table is a table created by gathering and calculating data from the
 
 ## 📂 **SQL Syntax**
 This SQL syntax is used to create a new table named `kf_table_of_analysis` in the database `kimia_farma`. The new table is populated with data selected from existing tables (`kf_final_transaction`, `kf_kantor_cabang`, and `kf_product`).
-#### Create New Table
+#### 1. Create New Table
 ```SQL
 CREATE TABLE `kimia_farma.kf_table_of_analysis` 
 ```
 This line creates a new table named `kf_table_of_analysis` in the `kimia_farma` database.
-#### Data Selection and Transformation
+#### 2. Data Selection and Transformation
 ```SQL
 -- Create a New Table of Analysis in the Kimia Farma Database
 CREATE TABLE `kimia_farma.kf_table_of_analysis` AS
@@ -91,7 +91,7 @@ This `SELECT` statement fetches data from the specified tables (`kf_final_transa
 * It calculates `nett_sales` by subtracting the discount from the `price`.
 * It calculates `nett_profit` based on `nett_sales` and `gross_profit_percentage`.
 
-#### 📂 **Data Joins**
+#### 3. Data Joins
 ```SQL
 FROM `kimia_farma.kf_final_transaction` ft
 JOIN `kimia_farma.kf_kantor_cabang` kc ON ft.branch_id = kc.branch_id
