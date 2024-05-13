@@ -102,6 +102,8 @@ JOIN `kimia_farma.kf_product` p ON ft.product_id = p.product_id;
 This part specifies the tables to be joined (`kf_final_transaction`, `kf_kantor_cabang`, and `kf_product`) and the conditions for joining them. It joins `kf_final_transaction` with `kf_kantor_cabang` on `branch_id` and `kf_final_transaction` with `kf_product` on `product_id`.
 
 #### 📂 **Exploratory Data Analysis for Dashboard Performance Analytics Kimia Farma Business Year 2020-2023**
+Google BigQuery Link : https://console.cloud.google.com/bigquery?sq=784164172648:30103ada7f424273b1d45c0a411fcfed
+
 ```SQL
 SELECT
     branch_name,
