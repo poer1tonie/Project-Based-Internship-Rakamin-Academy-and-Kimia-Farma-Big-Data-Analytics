@@ -1,27 +1,53 @@
-## About The Program
-The Program Project-Based Internship collaboration between Rakamin Academy and Kimia Farma Big Data Analytics is a self-development and career acceleration program aimed at those interested in delving into the position of Big Data Analytics at Kimia Farma. This program provides access to basic learning materials such as Article Reviews and Company Coaching Videos to introduce you to the competencies and skills required by Big Data Analytics professionals in the company. In addition to the materials, there will be assessments of your learning outcomes in the form of weekly Task questions, culminating in the creation of a final project that will serve as your portfolio for this program.
+## 📂 **About The Program**
+As a Big Data Analytics Intern at Kimia Farma, my tasks will encompass a series of challenges that require a deep understanding of data and analytical skills. One of my main projects is to evaluate Kimia Farma's business performance from 2020 to 2023. Through the narrative built from the analysis findings, I can highlight important insights into sales performance, including areas requiring further attention and potential growth opportunities. The prepared infographics and data visualizations provide clear and easily understandable understanding of the analysis findings, facilitating interpretation and decision-making.
 
-## About Kimia Farma
+## 📂 **About Kimia Farma**
 Kimia Farma is the first pharmaceutical industry company in Indonesia, founded by the Dutch East Indies government in 1817. The company's original name was NV Chemicalien Handle Rathkamp & Co. Based on the policy of nationalization of former Dutch companies in the early independence period, in 1958, the Republic of Indonesia government merged several pharmaceutical companies into PNF (State Pharmaceutical Company) Bhinneka Kimia Farma. Then on August 16, 1971, the legal form of PNF was changed to a Limited Liability Company, so the company's name was changed to PT Kimia Farma (Persero).
 
-## Objective
+## 📂 **Objective**
 The objective of the project is to evaluate the business performance of Kimia Farma from 2020 to 2023. Required to complete a series of challenges that involve importing data sets into BigQuery, creating analytical tables, and building a dashboard in Google Looker Studio.
 
-## Challenges
+## 📂 **Challenges**
 - **Challenge 1**: Importing data sets into BigQuery. Import four data sets provided by Kimia Farma.
 - **Challenge 2**: Creating analytical tables in BigQuery. Create a new table in BigQuery that combines the data from the four imported datasets.
 - **Challenge 3**: Creating a performance dashboard in Google Looker Studio. Create a dashboard in Google Looker Studio that visualizes the data from the analytical table you created in BigQuery.
 
-## Datasets
-The datasets include transaction information `kf_final_transaction`, inventory data `kf_inventory`, branch information `kf_kantor_cabang`, and product information `kf_product`.
+## 📂 **Importing Dataset to BigQuery**
+### Dataset
+The provided dataset consists of the following tables: <br>
+-  kf_final_transaction.csv 
+-  kf_inventory.csv  
+-  kf_kantor_cabang.csv
+-  kf_product.csv
 
-## SQL Syntax
-This SQL syntax is used to create a new table named `kf_analysis` in the database `kimia_farma`. The new table is populated with data selected from existing tables (`kf_final_transaction`, `kf_kantor_cabang`, and `kf_product`).
+## 📂 **Design Datamart**
+### Aggregate Table
+An aggregate table is a table created by gathering and calculating data from the base tables. This aggregate table contains more concise information and is used for analyzing data more quickly and efficiently. The results of this table will be used as a source for creating sales dashboard reports. The following are the mandatory columns in this table: <br>
+
+● transaction_id : kode id transaksi<br>
+● date : tanggal transaksi dilakukan<br>
+● branch_id : kode id cabang Kimia Farma<br>
+● branch_name : nama cabang Kimia Farma<br>
+● kota : kota cabang Kimia Farma<br>
+● provinsi : provinsi cabang Kimia Farma<br>
+● rating_cabang : penilaian konsumen terhadap cabang Kimia Farma <br>
+● customer_name : Nama customer yang melakukan transaksi<br>
+● product_id : kode product obat<br>
+● product_name : nama obat<br>
+● actual_price : harga obat<br>
+● discount_percentage : Persentase diskon yang diberikan pada obat<br>
+● persentase_gross_laba : Persentase laba yang seharusnya diterima dari obat <br>
+● nett_sales : harga setelah diskon<br>
+● nett_profit : keuntungan yang diperoleh Kimia Farma<br>
+● rating_transaksi : penilaian konsumen terhadap transaksi yang dilakukan<br>
+
+## 📂 **SQL Syntax**
+This SQL syntax is used to create a new table named `kf_table_of_analysis` in the database `kimia_farma`. The new table is populated with data selected from existing tables (`kf_final_transaction`, `kf_kantor_cabang`, and `kf_product`).
 #### Create New Table
 ```SQL
 CREATE TABLE `kimia_farma.kf_table_of_analysis` 
 ```
-This line creates a new table named `kf_analysis` in the `kimia_farma` database.
+This line creates a new table named `kf_table_of_analysis` in the `kimia_farma` database.
 #### Data Selection and Transformation
 ```SQL
 -- Create a New Table of Analysis in the Kimia Farma Database
@@ -65,7 +91,7 @@ This `SELECT` statement fetches data from the specified tables (`kf_final_transa
 * It calculates `nett_sales` by subtracting the discount from the `price`.
 * It calculates `nett_profit` based on `nett_sales` and `gross_profit_percentage`.
 
-#### Data Joins
+#### 📂 **Data Joins**
 ```SQL
 FROM `kimia_farma.kf_final_transaction` ft
 JOIN `kimia_farma.kf_kantor_cabang` kc ON ft.branch_id = kc.branch_id
@@ -73,7 +99,7 @@ JOIN `kimia_farma.kf_product` p ON ft.product_id = p.product_id;
 ```
 This part specifies the tables to be joined (`kf_final_transaction`, `kf_kantor_cabang`, and `kf_product`) and the conditions for joining them. It joins `kf_final_transaction` with `kf_kantor_cabang` on `branch_id` and `kf_final_transaction` with `kf_product` on `product_id`.
 
-#### Exploratory Data Analysis for Dashboard Performance Analytics Kimia Farma Business Year 2020-2023
+#### 📂 **Exploratory Data Analysis for Dashboard Performance Analytics Kimia Farma Business Year 2020-2023**
 ```SQL
 SELECT
     branch_name,
@@ -100,19 +126,9 @@ This query provides the following insights:
 * Total net sales and net profit.
 * Average transaction and branch ratings.
 
-## Dashboard
+## 📂 **Dashboard**
 Google Looker Dashboard Link: https://lookerstudio.google.com/reporting/22617c03-62d3-4d3b-87b4-e30c755a2515
-!Dashboard.png
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/poer1tonie/Project-Based-Internship-Rakamin-Academy-dan-Kimia-Farma-Big-Data-Analytics/assets/165170405/daa54314-f868-4861-a502-c4dd1bf763fd)
 
 
 
