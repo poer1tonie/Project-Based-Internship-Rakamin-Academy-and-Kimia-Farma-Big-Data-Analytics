@@ -42,6 +42,8 @@ An aggregate table is a table created by gathering and calculating data from the
 ● rating_transaksi : penilaian konsumen terhadap transaksi yang dilakukan<br>
 
 ## 📂 **SQL Syntax**
+Google BigQuery Link : https://console.cloud.google.com/bigquery?sq=784164172648:d66c1687344e4fc386f20e6a5f78b53f
+
 This SQL syntax is used to create a new table named `kf_table_of_analysis` in the database `kimia_farma`. The new table is populated with data selected from existing tables (`kf_final_transaction`, `kf_kantor_cabang`, and `kf_product`).
 #### 1. Create New Table
 ```SQL
